@@ -1,0 +1,82 @@
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input (InputLayer)          [(None, 128, 32, 1)]      0         
+                                                                 
+ conv2d_5 (Conv2D)           (None, 128, 32, 16)       160       
+                                                                 
+ batch_normalization_5 (Batc  (None, 128, 32, 16)      64        
+ hNormalization)                                                 
+                                                                 
+ leaky_re_lu_5 (LeakyReLU)   (None, 128, 32, 16)       0         
+                                                                 
+ max_pooling2d_3 (MaxPooling  (None, 64, 16, 16)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_6 (Conv2D)           (None, 64, 16, 32)        4640      
+                                                                 
+ batch_normalization_6 (Batc  (None, 64, 16, 32)       128       
+ hNormalization)                                                 
+                                                                 
+ leaky_re_lu_6 (LeakyReLU)   (None, 64, 16, 32)        0         
+                                                                 
+ max_pooling2d_4 (MaxPooling  (None, 32, 8, 32)        0         
+ 2D)                                                             
+                                                                 
+ dropout_4 (Dropout)         (None, 32, 8, 32)         0         
+                                                                 
+ conv2d_7 (Conv2D)           (None, 32, 8, 48)         13872     
+                                                                 
+ batch_normalization_7 (Batc  (None, 32, 8, 48)        192       
+ hNormalization)                                                 
+                                                                 
+ leaky_re_lu_7 (LeakyReLU)   (None, 32, 8, 48)         0         
+                                                                 
+ max_pooling2d_5 (MaxPooling  (None, 16, 4, 48)        0         
+ 2D)                                                             
+                                                                 
+ dropout_5 (Dropout)         (None, 16, 4, 48)         0         
+                                                                 
+ conv2d_8 (Conv2D)           (None, 16, 4, 64)         27712     
+                                                                 
+ batch_normalization_8 (Batc  (None, 16, 4, 64)        256       
+ hNormalization)                                                 
+                                                                 
+ leaky_re_lu_8 (LeakyReLU)   (None, 16, 4, 64)         0         
+                                                                 
+ dropout_6 (Dropout)         (None, 16, 4, 64)         0         
+                                                                 
+ conv2d_9 (Conv2D)           (None, 16, 4, 80)         46160     
+                                                                 
+ batch_normalization_9 (Batc  (None, 16, 4, 80)        320       
+ hNormalization)                                                 
+                                                                 
+ leaky_re_lu_9 (LeakyReLU)   (None, 16, 4, 80)         0         
+                                                                 
+ reshape_1 (Reshape)         (None, 16, 320)           0         
+                                                                 
+ bidirectional_5 (Bidirectio  (None, 16, 512)          1181696   
+ nal)                                                            
+                                                                 
+ bidirectional_6 (Bidirectio  (None, 16, 512)          1574912   
+ nal)                                                            
+                                                                 
+ bidirectional_7 (Bidirectio  (None, 16, 512)          1574912   
+ nal)                                                            
+                                                                 
+ bidirectional_8 (Bidirectio  (None, 16, 512)          1574912   
+ nal)                                                            
+                                                                 
+ bidirectional_9 (Bidirectio  (None, 16, 512)          1574912   
+ nal)                                                            
+                                                                 
+ dropout_7 (Dropout)         (None, 16, 512)           0         
+                                                                 
+ dense_1 (Dense)             (None, 16, 111)           56943     
+                                                                 
+=================================================================
+Total params: 7,631,791
+Trainable params: 7,631,311
+Non-trainable params: 480
+_________________________________________________________________

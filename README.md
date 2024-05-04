@@ -1,4 +1,15 @@
-# Note
-When attempting to upload the file "train.tsv" to GitHub, we encountered a restriction limiting file sizes to a maximum of 100MB. However, the size of our file exceeds this limitation, being more than 200MB in size.
+Handwritten Text Recognition (HTR) system implemented using [TensorFlow 2.x](https://www.tensorflow.org/) and trained on the [IIIT DataSet](https://cvit.iiit.ac.in/research/projects/cvit-projects/indic-hw-data). 
 
-https://drive.google.com/file/d/1wV0kyxHVDj-t2tI_dRUSRfAVH1VA384b/view?usp=sharing
+## Requirements
+
+- Python 3.x
+- OpenCV 4.x
+- editdistance
+- TensorFlow 2.x
+
+
+## Steps To run the model
+
+run finalmodel.ipynb 
+
+and all the preprocessing is done and saved in files and those files are imported in the finalmodel 

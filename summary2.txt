@@ -1,0 +1,43 @@
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input (InputLayer)          [(None, 128, 32, 1)]      0         
+                                                                 
+ reshape (Reshape)           (None, 64, 16, 4)         0         
+                                                                 
+ conv2d (Conv2D)             (None, 64, 16, 8)         296       
+                                                                 
+ conv2d_1 (Conv2D)           (None, 32, 4, 16)         1040      
+                                                                 
+ gated_conv2d (GatedConv2D)  (None, 32, 4, 16)         2320      
+                                                                 
+ conv2d_2 (Conv2D)           (None, 32, 4, 32)         4640      
+                                                                 
+ gated_conv2d_1 (GatedConv2D  (None, 32, 4, 32)        9248      
+ )                                                               
+                                                                 
+ conv2d_3 (Conv2D)           (None, 16, 1, 64)         16448     
+                                                                 
+ gated_conv2d_2 (GatedConv2D  (None, 16, 1, 64)        36928     
+ )                                                               
+                                                                 
+ conv2d_4 (Conv2D)           (None, 16, 1, 128)        73856     
+                                                                 
+ reshape_1 (Reshape)         (None, 16, 128)           0         
+                                                                 
+ bidirectional (Bidirectiona  (None, 16, 256)          263168    
+ l)                                                              
+                                                                 
+ dense (Dense)               (None, 16, 128)           32896     
+                                                                 
+ bidirectional_1 (Bidirectio  (None, 16, 256)          263168    
+ nal)                                                            
+                                                                 
+ dense_1 (Dense)             (None, 16, 111)           28527     
+                                                                 
+=================================================================
+Total params: 732,535
+Trainable params: 732,535
+Non-trainable params: 0
+_________________________________________________________________
